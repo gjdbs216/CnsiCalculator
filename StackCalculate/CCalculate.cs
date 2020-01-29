@@ -25,7 +25,7 @@ namespace StackCalculate
          */
         Stack<string> pre_fix = new Stack<string>();
 
-        public void convertPrefix(string _expression)
+        public double convertPrefix(string _expression)
         {
             try
             {
@@ -107,13 +107,13 @@ namespace StackCalculate
                     if (currentString != "")
                         _exp += currentString + "~";
                 }
-                Console.WriteLine(_exp);
-                expression_calculate(_exp);
+                return expression_calculate(_exp);
             }
             catch (Exception _ex)
             {
                 Console.WriteLine(m_exceptionClassName + MethodBase.GetCurrentMethod().Name + _ex);
             }
+            return 0.0;
         } 
         string[] expressionSplit(string _expression)
         {
@@ -191,7 +191,10 @@ namespace StackCalculate
                 {
                     string s = expArray.Pop();
                     if (s != "")
+                    {
                         Console.WriteLine(s);
+                        answer = double.Parse(s);
+                    }
                 }
 
                 return answer;

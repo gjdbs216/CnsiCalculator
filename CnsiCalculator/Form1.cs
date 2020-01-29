@@ -174,7 +174,7 @@ namespace CnsiCalculator
             try
             {
                 CCalculate a = new CCalculate();
-                a.convertPrefix(txt_numberInputView.Text);
+                lb_answerView.Text = a.convertPrefix(txt_numberInputView.Text).ToString();
             }
             catch (Exception _ex)
             {
@@ -187,6 +187,19 @@ namespace CnsiCalculator
             try
             {
                 txt_numberInputView.Text= txt_numberInputView.Text.Substring(0, txt_numberInputView.Text.Length - 1);
+            }
+            catch (Exception _ex)
+            {
+                Console.WriteLine(m_exceptionClassName + MethodBase.GetCurrentMethod().Name + _ex);
+            }
+        }
+
+        private void btn_resultMemorySave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string answer = lb_answerView.Text;
+                listBox1.Items.Add(answer);
             }
             catch (Exception _ex)
             {

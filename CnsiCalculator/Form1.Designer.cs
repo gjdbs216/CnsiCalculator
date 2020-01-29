@@ -50,6 +50,7 @@
             this.btn_resultMemorySave = new System.Windows.Forms.Button();
             this.btn_equalSignInput = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lb_answerView = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_numberInputView
@@ -251,6 +252,7 @@
             this.btn_resultMemorySave.TabIndex = 19;
             this.btn_resultMemorySave.Text = "mem";
             this.btn_resultMemorySave.UseVisualStyleBackColor = true;
+            this.btn_resultMemorySave.Click += new System.EventHandler(this.btn_resultMemorySave_Click);
             // 
             // btn_equalSignInput
             // 
@@ -266,16 +268,26 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(221, 12);
+            this.listBox1.Location = new System.Drawing.Point(221, 60);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(163, 280);
+            this.listBox1.Size = new System.Drawing.Size(163, 232);
             this.listBox1.TabIndex = 21;
+            // 
+            // lb_answerView
+            // 
+            this.lb_answerView.AutoSize = true;
+            this.lb_answerView.Location = new System.Drawing.Point(232, 17);
+            this.lb_answerView.Name = "lb_answerView";
+            this.lb_answerView.Size = new System.Drawing.Size(11, 12);
+            this.lb_answerView.TabIndex = 22;
+            this.lb_answerView.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 301);
+            this.Controls.Add(this.lb_answerView);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btn_equalSignInput);
             this.Controls.Add(this.btn_resultMemorySave);
@@ -331,6 +343,7 @@
         private System.Windows.Forms.Button btn_resultMemorySave;
         private System.Windows.Forms.Button btn_equalSignInput;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label lb_answerView;
     }
 }
 
